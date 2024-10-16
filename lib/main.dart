@@ -1,24 +1,32 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(MyApp());
-}
+void main() => runApp(const app());
 
-class MyApp extends StatelessWidget {
+class app extends StatelessWidget {
+  const app({super.key});
+
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context){
+    const String appTitle = "Jobflirt - find a Job";
     return MaterialApp(
+      title: appTitle,
       home: Scaffold(
         appBar: AppBar(
-          title: Text('My First Flutter App'),
+          title: const Text(appTitle),
         ),
-        body: Center(
-          child: Text(
-            'Hello, Flutter!',
-            style: TextStyle(fontSize: 24),
-          ),
+        body: const Center(
+          child: Text("Test Text"),
         ),
       ),
     );
   }
+}
+
+class titleSection extends StatelessWidget {
+  const titleSection({
+    super.key,
+    required this.name,
+    required this.location,
+  });
+
 }
