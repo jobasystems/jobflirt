@@ -1,32 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:jobflirt/widgets/HomePage.dart';
 
-void main() => runApp(const app());
+void main() => runApp(MyApp());
 
-class app extends StatelessWidget {
-  const app({super.key});
-
+class MyApp extends StatelessWidget {
   @override
-  Widget build(BuildContext context){
-    const String appTitle = "Jobflirt - find a Job";
+  Widget build(BuildContext context) {
     return MaterialApp(
-      title: appTitle,
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text(appTitle),
-        ),
-        body: const Center(
-          child: Text("Test Text"),
-        ),
-      ),
+      title: 'Job Swipe App',
+      theme: ThemeData(primarySwatch: Colors.blue),
+      home: HomePage(),
     );
   }
-}
-
-class titleSection extends StatelessWidget {
-  const titleSection({
-    super.key,
-    required this.name,
-    required this.location,
-  });
-
 }
